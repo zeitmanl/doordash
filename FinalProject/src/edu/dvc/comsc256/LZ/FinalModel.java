@@ -18,9 +18,8 @@ public class FinalModel {
     //retrieve menu from database
 	public ArrayList<String> fetchMenu() {
 		try {
-			//change this to scott/tiger
         	myConn = DriverManager.getConnection(""
-        			+ "jdbc:mysql://localhost:3306/menu?user=root&password=root");
+        			+ "jdbc:mysql://localhost:3306/menu?user=scott&password=tiger");
         	myStmt = myConn.createStatement();
 
         	String makeQ = "SELECT * FROM menu.menu;";
